@@ -3,9 +3,8 @@
   <%= f.text_field :title %><br>
   <% if @song.artist.nil? %>
     <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name)%>
-    <%= f.hidden_field :artist_id, @artist.id %>
   <% else %>
-    <%= f.hidden_field :artist_id, @artist.id %>
+    <%= f.hidden_field :artist_id %>
   <% end  %>
   <%= f.label :artist_name %>
   <%= f.text_field :artist_name %>
